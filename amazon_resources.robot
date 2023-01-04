@@ -40,3 +40,32 @@ Clicar no botão de pesquisa
 
 Verificar o resultado da pesquisa se esta listando o produto "${PRODUTO}"
     Wait Until Element Is Visible    locator=(//span[contains(.,'${PRODUTO}')])[2]
+
+#GHERKINS STEPS
+
+#CASE 1
+
+Dado que estou na home page da Amazon.com.br
+    Acessar a home page do site Amazon.com.br
+    Verificar se o título da página fica "Amazon.com.br | Tudo pra você, de A a Z."
+
+Quando acessar o menu "Eletrônicos"
+    Entrar no menu "Eletrônicos"
+
+Então o título da página deve ficar "Eletrônicos e Tecnologia | Amazon.com.br"
+    Verificar se o título da página fica "Eletrônicos e Tecnologia | Amazon.com.br"
+
+E o texto "Eletrônicos e Tecnologia" deve ser exibido na página
+    Verificar se aparece a frase "Eletrônicos e Tecnologia"
+
+E a categoria "Computadores e Informática" deve ser exibida na página
+    Verificar se aparece a categoria "Computadores e Informática"
+
+#CASE 2
+
+Quando pesquisar pelo produto "xbox series s"
+    Digitar o nome de produto "xbox series s" no campo de pesquisa
+    Clicar no botão de pesquisa
+
+Então um produto da linha "Xbox Series S" deve ser mostrado na página
+    Verificar o resultado da pesquisa se esta listando o produto "Console Xbox Series S"
