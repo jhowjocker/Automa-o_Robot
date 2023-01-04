@@ -2,7 +2,7 @@
 Documentation    Esta switch testa o site da Amazom.com.br
 Resource         amazon_resources.robot
 Test Setup       Abrir o navegador
-# Test Teardown    Fechar o navegador
+Test Teardown    Fechar o navegador
 
 
 *** Test Cases ***
@@ -19,10 +19,10 @@ Caso de teste 1 - Acesso ao menu "Eletrônicos"
     Verificar se aparece a categoria "Eletrônicos para Escritório"
     
 
-# Caso de teste 2 - Pesquisa de um Produto
-#     [Documentation]  Esse teste verifica a busca de um produto
-#     [Tags]           busca_produtos    lista_busca
-#     Acessar a home page do site Amazon.com.br
-#     Digitar o nome de produto "Xbox Series S" no campo de pesquisa
-#     Clicar no botão de pesquisa
-#     Verificar o resultado da pesquisa se esta listando o produto pesquisado
+Caso de teste 2 - Pesquisa de um Produto
+    [Documentation]  Esse teste verifica a busca de um produto
+    [Tags]           busca_produtos    lista_busca
+    Acessar a home page do site Amazon.com.br
+    Digitar o nome de produto "Xbox Series S" no campo de pesquisa
+    Clicar no botão de pesquisa
+    Verificar o resultado da pesquisa se esta listando o produto "Console Xbox Series S"
